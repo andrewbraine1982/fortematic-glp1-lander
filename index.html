@@ -66,7 +66,7 @@ z-index:2;
   </style>
 </head>
 <body>
-  <header class="nav"><div class="container nav-inner"><a class="logo" href="/">ForteMatic®</a><nav class="nav-links"><a href="#how">How It Works</a><a href="#ingredients">Ingredients</a><a href="#benefits">Benefits</a><a href="#science">Science</a><a href="#reviews">Reviews</a><a href="#articles">Articles</a><a href="#faq">FAQ</a></nav><a class="amazon-btn" href="https://www.amazon.com/" rel="nofollow sponsored"><span class="amazon-mark">a</span> Buy on amazon →</a></div></header>
+  <header class="nav"><div class="container nav-inner"><a class="logo" href="/">ForteMatic®</a><nav class="nav-links"><a href="#how">How It Works</a><a href="#ingredients">Ingredients</a><a href="#benefits">Benefits</a><a href="#science">Science</a><a href="#reviews">Reviews</a><a href="#articles">Articles</a><a href="#faq">FAQ</a></nav><a class="amazon-btn" href="https://www.amazon.com/Fortematic-Supplement-Metabolism-Probiotics-Expert-Formulated/dp/B0FKZ4HJ6D/" rel="nofollow sponsored"><span class="amazon-mark">a</span> Buy on amazon →</a></div></header>
 
   <main>
 <section class="hero">
@@ -202,7 +202,7 @@ const faqs = [
     grid.addEventListener('click', e => {const b=e.target.closest('.faq-q'); if(!b) return; const item=b.parentElement; item.classList.toggle('open'); b.setAttribute('aria-expanded', item.classList.contains('open')); b.querySelector('span').textContent=item.classList.contains('open')?'−':'+';});
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product","name":"ForteMatic GLP-1 Probiotic / Prebiotic Weight Management","image":"https://www.fortematic.com/assets/fortematic-glp1.png","description":"Premium probiotic, prebiotic and berberine support formula designed to support natural GLP-1 production, appetite control, fat metabolism and weight management.","brand":{"@type":"Brand","name":"ForteMatic"},"offers":{"@type":"Offer","url":"https://www.amazon.com/","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"1000"}}
+  {"@context":"https://schema.org","@type":"Product","name":"ForteMatic GLP-1 Probiotic / Prebiotic Weight Management","image":"https://www.fortematic.com/assets/fortematic-glp1.png","description":"Premium probiotic, prebiotic and berberine support formula designed to support natural GLP-1 production, appetite control, fat metabolism and weight management.","brand":{"@type":"Brand","name":"ForteMatic"},"offers":{"@type":"Offer","url":"https://www.amazon.com/Fortematic-Supplement-Metabolism-Probiotics-Expert-Formulated/dp/B0FKZ4HJ6D/","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"1000"}}
   </script>
   <script type="application/ld+json" id="faqSchema"></script>
   <script>document.getElementById('faqSchema').textContent=JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqs.map(f=>({"@type":"Question","name":f[0],"acceptedAnswer":{"@type":"Answer","text":f[1]}}))});</script>
