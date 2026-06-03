@@ -197,9 +197,11 @@ const faqs = [
 ['Who should avoid GLP-1 supplements?','Anyone pregnant, nursing, taking medications or managing health conditions should speak with a healthcare professional before using supplements.']
 ];
     ];
-    const grid = document.getElementById('faqGrid');
-    grid.innerHTML = faqs.map((f,i)=>`<div class="faq-item"><button class="faq-q" aria-expanded="false">${f[0]} <span>+</span></button><div class="faq-a">${f[1]}</div></div>`).join('');
-    grid.addEventListener('click', e => {const b=e.target.closest('.faq-q'); if(!b) return; const item=b.parentElement; item.classList.toggle('open'); b.setAttribute('aria-expanded', item.classList.contains('open')); b.querySelector('span').textContent=item.classList.contains('open')?'−':'+';});
+  const grid = document.getElementById('faqGrid');
+if (grid) {
+  grid.innerHTML = faqs.map((f,i)=>`<div class="faq-item"><button class="faq-q" aria-expanded="false">${f[0]} <span>+</span></button><div class="faq-a">${f[1]}</div></div>`).join('');
+  grid.addEventListener('click', e => { const b=e.target.closest('.faq-q'); if(!b) return; const item=b.parentElement; item.classList.toggle('open'); b.setAttribute('aria-expanded', item.classList.contains('open')); b.querySelector('span').textContent = item.classList.contains('open') ? '−' : '+'; });
+} 
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Product","name":"ForteMatic GLP-1 Probiotic / Prebiotic Weight Management","image":"https://www.fortematic.com/assets/fortematic-glp1.png","description":"Premium probiotic, prebiotic and berberine support formula designed to support natural GLP-1 production, appetite control, fat metabolism and weight management.","brand":{"@type":"Brand","name":"ForteMatic"},"offers":{"@type":"Offer","url":"https://www.amazon.com/Fortematic-Supplement-Metabolism-Probiotics-Expert-Formulated/dp/B0FKZ4HJ6D/","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"1000"}}
