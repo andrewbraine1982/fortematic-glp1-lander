@@ -922,6 +922,656 @@
         padding: 48px 0;
       }
     }
+    /* ==================================================
+   FORTEMATIC CONVERSION HERO
+================================================== */
+
+.fm-hero {
+  background:
+    radial-gradient(circle at 52% 40%, #0b55d7 0%, #06245f 28%, #03142f 67%, #020c21 100%);
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* MAIN 3-COLUMN AREA */
+
+.fm-hero-grid {
+  width: min(1560px, calc(100% - 50px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.08fr 0.9fr;
+  align-items: center;
+
+  min-height: 710px;
+  gap: 30px;
+
+  padding: 40px 0 30px;
+}
+
+
+/* LEFT */
+
+.fm-hero-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.fm-kicker {
+  display: inline-block;
+
+  background: #0b469f;
+  color: #fff;
+
+  border-radius: 7px;
+
+  padding: 6px 13px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .02em;
+
+  margin-bottom: 18px;
+}
+
+
+.fm-hero-copy h1 {
+  margin: 0;
+
+  font-size: clamp(54px, 4.4vw, 84px);
+  line-height: .94;
+  letter-spacing: -.055em;
+
+  font-weight: 900;
+  color: #fff;
+}
+
+
+.fm-hero-copy h1 span {
+  display: block;
+
+  color: #ffc83d;
+
+  margin: 10px 0 8px;
+}
+
+
+.fm-intro {
+  max-width: 610px;
+
+  margin: 24px 0 18px;
+
+  font-size: 18px;
+  line-height: 1.55;
+
+  color: #edf4ff;
+}
+
+
+.fm-intro strong {
+  color: #ffd45b;
+}
+
+
+.fm-mini-trust {
+  display: flex;
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  margin: 18px 0 23px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #eaf1ff;
+}
+
+
+.fm-mini-trust span::first-letter {
+  color: #3fa0ff;
+}
+
+
+/* AMAZON BUTTON */
+
+.fm-amazon-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 290px;
+
+  padding: 17px 28px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,
+    #ffd765 0%,
+    #f7b91e 100%
+  );
+
+  color: #071020;
+
+  font-size: 19px;
+  font-weight: 900;
+
+  box-shadow:
+    0 12px 30px rgba(246,183,47,.25);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+
+.fm-amazon-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 34px rgba(246,183,47,.36);
+}
+
+
+.fm-amazon-a {
+  font-family: Georgia, serif;
+
+  font-size: 29px;
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+
+/* PRODUCT */
+
+.fm-product {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  min-width: 0;
+}
+
+
+.fm-product::before {
+  content: "";
+
+  position: absolute;
+
+  width: 85%;
+  height: 70%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(20,101,255,.25) 0%,
+      rgba(20,101,255,.1) 40%,
+      transparent 72%
+    );
+
+  z-index: 0;
+}
+
+
+.fm-product-image {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: min(100%, 700px);
+  height: auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 25px 27px rgba(0,0,0,.38));
+}
+
+
+/* RESULTS PANEL */
+
+.fm-results {
+  border-left: 1px solid rgba(255,200,60,.45);
+
+  padding-left: 30px;
+}
+
+
+.fm-results h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(32px, 2.6vw, 46px);
+  line-height: .96;
+
+  letter-spacing: -.02em;
+
+  font-weight: 900;
+}
+
+
+.fm-results h2 span {
+  color: #ffc82f;
+}
+
+
+.fm-result-photos {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+
+.fm-photo {
+  min-width: 0;
+}
+
+
+.fm-photo-label {
+  width: 120px;
+
+  margin: 0 auto 8px;
+
+  border: 1px solid #1687ff;
+
+  border-radius: 5px;
+
+  padding: 4px 7px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  color: #fff;
+}
+
+
+.fm-photo-frame {
+  width: 100%;
+
+  aspect-ratio: 0.72;
+
+  background: #08152d;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+
+.fm-photo-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  background: #07162d;
+}
+
+
+/* IMPORTANT:
+   object-fit: contain means the uploaded client photographs
+   are NOT cropped or altered.
+*/
+
+
+.fm-testimonial {
+  position: relative;
+
+  margin: 22px 0 0;
+
+  padding: 0 0 0 27px;
+
+  border: 0;
+
+  text-align: center;
+}
+
+
+.fm-quote {
+  position: absolute;
+
+  left: 0;
+  top: -10px;
+
+  color: #ffc52d;
+
+  font-family: Georgia, serif;
+
+  font-size: 55px;
+  line-height: 1;
+}
+
+
+.fm-testimonial p {
+  margin: 0 auto;
+
+  max-width: 440px;
+
+  color: #eef4ff;
+
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+
+.fm-testimonial strong {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #ffc82f;
+
+  font-size: 21px;
+}
+
+
+/* ================================================
+   TRUST STRIP
+================================================ */
+
+.fm-trust-strip {
+  background: #fff;
+
+  color: #07142c;
+
+  border-top: 1px solid #e2e7ef;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 26px max(40px, calc((100% - 1480px) / 2));
+
+  gap: 0;
+}
+
+
+.fm-trust-item {
+  min-height: 92px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 5px 30px;
+
+  border-right: 1px solid #d6dbe4;
+}
+
+
+.fm-trust-item:last-child {
+  border-right: 0;
+}
+
+
+.fm-trust-item strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #07142c;
+
+  font-size: 17px;
+  line-height: 1.13;
+}
+
+
+.fm-trust-item span {
+  color: #303849;
+
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+
+.fm-gmp-icon {
+  width: 67px;
+  height: 67px;
+
+  flex: 0 0 67px;
+
+  border: 3px solid #07142c;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  color: #07142c;
+}
+
+
+.fm-usa-flag {
+  font-size: 56px;
+
+  line-height: 1;
+
+  flex: 0 0 auto;
+}
+
+
+.fm-leaf {
+  width: 67px;
+  height: 67px;
+
+  flex: 0 0 67px;
+
+  display: grid;
+  place-items: center;
+
+  color: #267333;
+
+  border: 2px solid #267333;
+
+  border-radius: 50%;
+
+  font-size: 38px;
+  line-height: 1;
+}
+
+
+.fm-green {
+  color: #267333 !important;
+}
+
+
+.fm-shield {
+  width: 57px;
+  height: 67px;
+
+  flex: 0 0 57px;
+
+  display: grid;
+  place-items: center;
+
+  border: 3px solid #07142c;
+
+  border-radius: 26px 26px 32px 32px;
+
+  color: #07142c;
+
+  font-size: 28px;
+  font-weight: 900;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+  .fm-hero-grid {
+    grid-template-columns: 1fr 1fr;
+
+    min-height: auto;
+  }
+
+
+  .fm-results {
+    grid-column: 1 / -1;
+
+    border-left: 0;
+    border-top: 1px solid rgba(255,200,60,.35);
+
+    padding:
+      35px 0 10px;
+  }
+
+
+  .fm-results h2 {
+    text-align: center;
+  }
+
+
+  .fm-result-photos {
+    max-width: 650px;
+
+    margin: auto;
+  }
+
+
+  .fm-testimonial {
+    max-width: 650px;
+
+    margin:
+      22px auto 0;
+  }
+
+
+  .fm-trust-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .fm-trust-item:nth-child(2) {
+    border-right: 0;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+  .fm-hero-grid {
+    width: min(100% - 30px, 620px);
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 30px;
+  }
+
+
+  .fm-hero-copy {
+    width: 100%;
+  }
+
+
+  .fm-hero-copy h1 {
+    font-size: clamp(46px, 13vw, 68px);
+  }
+
+
+  .fm-intro {
+    font-size: 16px;
+  }
+
+
+  .fm-mini-trust {
+    gap: 10px 16px;
+  }
+
+
+  .fm-amazon-button {
+    width: 100%;
+  }
+
+
+  .fm-product {
+    width: 100%;
+  }
+
+
+  .fm-product-image {
+    max-width: 500px;
+  }
+
+
+  .fm-results {
+    width: 100%;
+
+    padding-top: 30px;
+  }
+
+
+  .fm-result-photos {
+    gap: 8px;
+  }
+
+
+  .fm-photo-label {
+    width: 95px;
+
+    font-size: 12px;
+  }
+
+
+  .fm-testimonial p {
+    font-size: 15px;
+  }
+
+
+  .fm-trust-strip {
+    grid-template-columns: 1fr;
+
+    padding:
+      10px 20px 25px;
+  }
+
+
+  .fm-trust-item {
+    border-right: 0;
+
+    border-bottom: 1px solid #dde2e9;
+
+    padding: 20px 5px;
+  }
+
+
+  .fm-trust-item:last-child {
+    border-bottom: 0;
+  }
+
+}
   </style>
 </head>
 
