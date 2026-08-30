@@ -922,120 +922,191 @@
         padding: 48px 0;
       }
     }
-    /* ==================================================
-   FORTEMATIC CONVERSION HERO
+/* ==================================================
+   FORTEMATIC HERO — APPROVED LIGHT VERSION
 ================================================== */
 
 .fm-hero {
-  background:
-    radial-gradient(circle at 52% 40%, #0b55d7 0%, #06245f 28%, #03142f 67%, #020c21 100%);
-  color: #fff;
   width: 100%;
   overflow: hidden;
+  background: #fff;
+  color: #071b43;
 }
 
-
-/* MAIN 3-COLUMN AREA */
+/* =========================
+   MAIN HERO
+========================= */
 
 .fm-hero-grid {
-  width: min(1560px, calc(100% - 50px));
+  width: 100%;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 0.95fr 1.08fr 0.9fr;
-  align-items: center;
+  grid-template-columns: 32% 36% 32%;
+  align-items: stretch;
 
-  min-height: 710px;
-  gap: 30px;
-
-  padding: 40px 0 30px;
+  min-height: 650px;
 }
 
-
-/* LEFT */
+/* =========================
+   LEFT COPY
+========================= */
 
 .fm-hero-copy {
   position: relative;
   z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 40px 20px 36px 34px;
+
+  background:
+    radial-gradient(circle at 90% 45%, rgba(53,118,215,.10), transparent 55%),
+    #fff;
 }
 
 .fm-kicker {
-  display: inline-block;
+  display: block;
 
-  background: #0b469f;
-  color: #fff;
+  padding: 0;
+  margin: 0 0 17px;
 
-  border-radius: 7px;
+  background: transparent;
+  color: #1151bd;
 
-  padding: 6px 13px;
+  border-radius: 0;
 
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: .02em;
-
-  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .01em;
+  text-transform: uppercase;
 }
-
 
 .fm-hero-copy h1 {
   margin: 0;
 
-  font-size: clamp(54px, 4.4vw, 84px);
-  line-height: .94;
-  letter-spacing: -.055em;
+  color: #061a40;
 
+  font-size: clamp(50px, 4.2vw, 72px);
+  line-height: .98;
+  letter-spacing: -.045em;
   font-weight: 900;
-  color: #fff;
 }
-
 
 .fm-hero-copy h1 span {
   display: block;
 
-  color: #ffc83d;
+  color: #1457c6;
 
-  margin: 10px 0 8px;
+  margin: 9px 0 7px;
+
+  font-size: .72em;
+  line-height: 1.04;
+  letter-spacing: -.035em;
 }
-
 
 .fm-intro {
-  max-width: 610px;
+  position: relative;
 
-  margin: 24px 0 18px;
+  max-width: 500px;
 
-  font-size: 18px;
-  line-height: 1.55;
+  margin: 26px 0 17px;
+  padding-top: 20px;
 
-  color: #edf4ff;
+  color: #111827;
+
+  font-size: 17px;
+  line-height: 1.48;
 }
 
+.fm-intro::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 108px;
+  height: 3px;
+
+  background: #f4b719;
+}
 
 .fm-intro strong {
-  color: #ffd45b;
+  color: #0d4db3;
+  font-weight: 800;
 }
 
+/* MINI TRUST */
 
 .fm-mini-trust {
   display: flex;
-  gap: 20px;
-
+  align-items: center;
   flex-wrap: wrap;
 
-  margin: 18px 0 23px;
+  gap: 8px 0;
 
-  font-size: 14px;
-  font-weight: 700;
+  margin: 3px 0 22px;
 
-  color: #eaf1ff;
+  color: #111827;
+
+  font-size: 13px;
+  font-weight: 600;
 }
 
+.fm-mini-trust span {
+  position: relative;
 
-.fm-mini-trust span::first-letter {
-  color: #3fa0ff;
+  padding: 0 14px 0 22px;
 }
 
+.fm-mini-trust span:first-child {
+  padding-left: 22px;
+}
 
-/* AMAZON BUTTON */
+.fm-mini-trust span::before {
+  content: "✓";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 15px;
+  height: 15px;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid #1155c5;
+  border-radius: 50%;
+
+  color: #1155c5;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.fm-mini-trust span:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 1px;
+
+  width: 1px;
+  height: 18px;
+
+  background: #aeb6c3;
+}
+
+/* =========================
+   AMAZON BUTTON
+========================= */
 
 .fm-amazon-button {
   display: inline-flex;
@@ -1043,176 +1114,218 @@
   align-items: center;
   justify-content: center;
 
-  gap: 12px;
+  align-self: flex-start;
 
-  min-width: 290px;
+  gap: 13px;
 
-  padding: 17px 28px;
+  min-width: 275px;
 
-  border-radius: 10px;
+  padding: 15px 25px;
+
+  border-radius: 9px;
 
   background: linear-gradient(
     180deg,
-    #ffd765 0%,
-    #f7b91e 100%
+    #ffd65d 0%,
+    #ffb917 100%
   );
 
-  color: #071020;
+  color: #080d17;
 
-  font-size: 19px;
+  font-size: 18px;
+  line-height: 1;
   font-weight: 900;
 
+  text-decoration: none;
+
   box-shadow:
-    0 12px 30px rgba(246,183,47,.25);
+    0 8px 20px rgba(183,128,0,.20);
 
   transition:
     transform .18s ease,
     box-shadow .18s ease;
 }
 
-
 .fm-amazon-button:hover {
   transform: translateY(-2px);
 
   box-shadow:
-    0 16px 34px rgba(246,183,47,.36);
+    0 12px 25px rgba(183,128,0,.27);
 }
-
 
 .fm-amazon-a {
   font-family: Georgia, serif;
 
-  font-size: 29px;
-  line-height: 1;
-
+  font-size: 30px;
+  line-height: .8;
   font-weight: 900;
 }
 
-
-/* PRODUCT */
+/* =========================
+   PRODUCT — LARGE CENTRE
+========================= */
 
 .fm-product {
-  display: flex;
+  position: relative;
 
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  position: relative;
-
   min-width: 0;
-}
 
+  padding: 25px 0 18px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(60,126,220,.18) 0%,
+      rgba(99,151,221,.09) 37%,
+      rgba(255,255,255,0) 70%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(226,237,251,.55) 50%,
+      rgba(255,255,255,0) 100%
+    );
+}
 
 .fm-product::before {
   content: "";
 
   position: absolute;
 
-  width: 85%;
-  height: 70%;
+  left: 8%;
+  right: 8%;
+  bottom: 45px;
+
+  height: 55px;
 
   background:
     radial-gradient(
       ellipse,
-      rgba(20,101,255,.25) 0%,
-      rgba(20,101,255,.1) 40%,
-      transparent 72%
+      rgba(22,38,67,.19),
+      transparent 67%
     );
 
-  z-index: 0;
+  filter: blur(8px);
 }
-
 
 .fm-product-image {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   display: block;
 
-  width: min(100%, 700px);
+  width: 118%;
+  max-width: 720px;
   height: auto;
 
   object-fit: contain;
 
+  transform: scale(1.10);
+
+  transform-origin: center center;
+
   filter:
-    drop-shadow(0 25px 27px rgba(0,0,0,.38));
+    drop-shadow(0 20px 18px rgba(10,28,59,.19));
 }
 
-
-/* RESULTS PANEL */
+/* =========================
+   RESULTS CARD
+========================= */
 
 .fm-results {
-  border-left: 1px solid rgba(255,200,60,.45);
+  position: relative;
+  z-index: 2;
 
-  padding-left: 30px;
+  padding: 27px 28px 28px;
+
+  background:
+    radial-gradient(circle at 50% 25%, #0a2861 0%, #041b43 48%, #021331 100%);
+
+  color: #fff;
+
+  border-radius: 14px 0 0 14px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
 .fm-results h2 {
-  margin: 0 0 20px;
+  margin: 0 0 17px;
 
-  font-size: clamp(32px, 2.6vw, 46px);
-  line-height: .96;
+  color: #fff;
 
+  font-size: clamp(29px, 2.35vw, 41px);
+  line-height: .94;
   letter-spacing: -.02em;
 
   font-weight: 900;
+  text-transform: uppercase;
 }
-
 
 .fm-results h2 span {
-  color: #ffc82f;
+  display: block;
+
+  margin-top: 3px;
+
+  color: #ffc529;
 }
 
+/* BEFORE / AFTER */
 
 .fm-result-photos {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 14px;
+  gap: 12px;
 }
-
 
 .fm-photo {
   min-width: 0;
 }
 
-
 .fm-photo-label {
-  width: 120px;
+  width: 104px;
 
   margin: 0 auto 8px;
 
-  border: 1px solid #1687ff;
+  padding: 4px 6px;
 
+  border: 1px solid #1789ff;
   border-radius: 5px;
 
-  padding: 4px 7px;
+  color: #fff;
 
   text-align: center;
 
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.2;
   font-weight: 900;
-
-  color: #fff;
 }
-
 
 .fm-photo-frame {
   width: 100%;
 
-  aspect-ratio: 0.72;
-
-  background: #08152d;
-
-  border-radius: 8px;
+  aspect-ratio: .73;
 
   overflow: hidden;
 
-  border: 1px solid rgba(255,255,255,.15);
+  background: #071a38;
+
+  border: 1px solid rgba(255,255,255,.20);
+  border-radius: 7px;
 }
 
+/*
+  IMPORTANT:
+  The actual uploaded photo is displayed directly.
+  No filters, transforms, AI enhancement or visual effects.
+*/
 
 .fm-photo-frame img {
   display: block;
@@ -1221,203 +1334,196 @@
   height: 100%;
 
   object-fit: contain;
+  object-position: center;
 
-  background: #07162d;
+  background: #071a38;
+
+  filter: none;
+  transform: none;
 }
 
-
-/* IMPORTANT:
-   object-fit: contain means the uploaded client photographs
-   are NOT cropped or altered.
-*/
-
+/* TESTIMONIAL */
 
 .fm-testimonial {
   position: relative;
 
-  margin: 22px 0 0;
+  margin: 19px 0 0;
 
-  padding: 0 0 0 27px;
+  padding: 0 5px 0 27px;
 
   border: 0;
 
   text-align: center;
 }
 
-
 .fm-quote {
   position: absolute;
 
   left: 0;
-  top: -10px;
+  top: -9px;
 
   color: #ffc52d;
 
   font-family: Georgia, serif;
 
-  font-size: 55px;
+  font-size: 48px;
   line-height: 1;
 }
 
-
 .fm-testimonial p {
+  max-width: 390px;
+
   margin: 0 auto;
 
-  max-width: 440px;
+  color: #fff;
 
-  color: #eef4ff;
-
-  font-size: 16px;
-  line-height: 1.48;
+  font-size: 14px;
+  line-height: 1.52;
 }
-
 
 .fm-testimonial strong {
   display: block;
 
   margin-top: 10px;
 
-  color: #ffc82f;
+  color: #ffc62d;
 
-  font-size: 21px;
+  font-size: 17px;
 }
 
-
-/* ================================================
+/* ==================================================
    TRUST STRIP
-================================================ */
+================================================== */
 
 .fm-trust-strip {
-  background: #fff;
-
-  color: #07142c;
-
-  border-top: 1px solid #e2e7ef;
+  width: 100%;
 
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
 
-  padding: 26px max(40px, calc((100% - 1480px) / 2));
+  padding: 22px max(25px, calc((100% - 1500px) / 2));
 
-  gap: 0;
+  background: #fff;
+
+  border-top: 1px solid #e3e6eb;
+  border-bottom: 1px solid #e3e6eb;
+
+  color: #0b1220;
 }
-
 
 .fm-trust-item {
-  min-height: 92px;
+  min-width: 0;
+  min-height: 78px;
 
   display: flex;
-
   align-items: center;
 
-  gap: 18px;
+  gap: 16px;
 
-  padding: 5px 30px;
+  padding: 4px 30px;
 
-  border-right: 1px solid #d6dbe4;
+  border-right: 1px solid #d6dae1;
 }
-
 
 .fm-trust-item:last-child {
   border-right: 0;
 }
 
-
 .fm-trust-item strong {
   display: block;
 
-  margin-bottom: 6px;
+  margin: 0 0 5px;
 
-  color: #07142c;
+  color: #10131a;
 
-  font-size: 17px;
-  line-height: 1.13;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 900;
 }
 
-
 .fm-trust-item span {
-  color: #303849;
+  display: block;
 
-  font-size: 14px;
+  color: #252a33;
+
+  font-size: 13px;
   line-height: 1.35;
 }
 
+/* GMP — BLACK */
 
 .fm-gmp-icon {
-  width: 67px;
-  height: 67px;
+  position: relative;
 
-  flex: 0 0 67px;
+  width: 64px;
+  height: 64px;
 
-  border: 3px solid #07142c;
-
-  border-radius: 50%;
+  flex: 0 0 64px;
 
   display: grid;
-
   place-items: center;
 
-  font-size: 20px;
-  font-weight: 900;
+  border: 3px solid #07101f;
+  border-radius: 50%;
 
-  color: #07142c;
+  color: #07101f;
+
+  font-size: 19px;
+  font-weight: 900;
 }
 
+/* USA FLAG */
 
 .fm-usa-flag {
-  font-size: 56px;
-
-  line-height: 1;
-
   flex: 0 0 auto;
+
+  font-size: 49px;
+  line-height: 1;
 }
 
+/* NATURAL INGREDIENTS — GREEN */
 
 .fm-leaf {
-  width: 67px;
-  height: 67px;
+  width: 64px;
+  height: 64px;
 
-  flex: 0 0 67px;
+  flex: 0 0 64px;
 
   display: grid;
   place-items: center;
 
-  color: #267333;
+  color: #247332;
 
-  border: 2px solid #267333;
+  border: 0;
 
-  border-radius: 50%;
-
-  font-size: 38px;
+  font-size: 43px;
   line-height: 1;
 }
 
-
 .fm-green {
-  color: #267333 !important;
+  color: #247332 !important;
 }
 
+/* GUARANTEE */
 
 .fm-shield {
-  width: 57px;
-  height: 67px;
+  width: 55px;
+  height: 63px;
 
-  flex: 0 0 57px;
+  flex: 0 0 55px;
 
   display: grid;
   place-items: center;
 
   border: 3px solid #07142c;
 
-  border-radius: 26px 26px 32px 32px;
+  border-radius: 23px 23px 29px 29px;
 
   color: #07142c;
 
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 900;
 }
-
 
 /* ==================================================
    TABLET
@@ -1426,54 +1532,58 @@
 @media (max-width: 1100px) {
 
   .fm-hero-grid {
-    grid-template-columns: 1fr 1fr;
-
-    min-height: auto;
+    grid-template-columns: 48% 52%;
   }
 
+  .fm-hero-copy {
+    padding:
+      40px 25px 35px;
+  }
+
+  .fm-product {
+    padding-right: 20px;
+  }
+
+  .fm-product-image {
+    width: 105%;
+    transform: none;
+  }
 
   .fm-results {
     grid-column: 1 / -1;
 
-    border-left: 0;
-    border-top: 1px solid rgba(255,200,60,.35);
+    border-radius: 0;
 
     padding:
-      35px 0 10px;
+      32px max(30px, 8vw) 35px;
   }
-
 
   .fm-results h2 {
     text-align: center;
   }
 
-
   .fm-result-photos {
-    max-width: 650px;
+    width: min(600px, 100%);
 
-    margin: auto;
+    margin: 0 auto;
   }
-
 
   .fm-testimonial {
-    max-width: 650px;
+    width: min(600px, 100%);
 
     margin:
-      22px auto 0;
+      20px auto 0;
   }
-
 
   .fm-trust-strip {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
-
 
   .fm-trust-item:nth-child(2) {
     border-right: 0;
   }
-
 }
-
 
 /* ==================================================
    MOBILE
@@ -1482,95 +1592,129 @@
 @media (max-width: 700px) {
 
   .fm-hero-grid {
-    width: min(100% - 30px, 620px);
-
     display: flex;
     flex-direction: column;
 
-    padding-top: 30px;
+    min-height: 0;
   }
-
 
   .fm-hero-copy {
+    order: 1;
+
     width: 100%;
+
+    padding:
+      30px 22px 15px;
   }
 
+  .fm-kicker {
+    font-size: 13px;
+
+    margin-bottom: 12px;
+  }
 
   .fm-hero-copy h1 {
-    font-size: clamp(46px, 13vw, 68px);
+    font-size: clamp(43px, 13vw, 60px);
   }
 
+  .fm-hero-copy h1 span {
+    font-size: .72em;
+  }
 
   .fm-intro {
-    font-size: 16px;
-  }
+    margin-top: 22px;
 
-
-  .fm-mini-trust {
-    gap: 10px 16px;
-  }
-
-
-  .fm-amazon-button {
-    width: 100%;
-  }
-
-
-  .fm-product {
-    width: 100%;
-  }
-
-
-  .fm-product-image {
-    max-width: 500px;
-  }
-
-
-  .fm-results {
-    width: 100%;
-
-    padding-top: 30px;
-  }
-
-
-  .fm-result-photos {
-    gap: 8px;
-  }
-
-
-  .fm-photo-label {
-    width: 95px;
-
-    font-size: 12px;
-  }
-
-
-  .fm-testimonial p {
     font-size: 15px;
   }
 
+  .fm-mini-trust {
+    font-size: 12px;
+  }
+
+  .fm-mini-trust span {
+    width: 100%;
+
+    padding-left: 22px;
+  }
+
+  .fm-mini-trust span::after {
+    display: none;
+  }
+
+  .fm-amazon-button {
+    width: 100%;
+
+    align-self: stretch;
+  }
+
+  .fm-product {
+    order: 2;
+
+    width: 100%;
+
+    min-height: 350px;
+
+    padding: 5px 20px 25px;
+  }
+
+  .fm-product-image {
+    width: 100%;
+    max-width: 520px;
+
+    transform: none;
+  }
+
+  .fm-results {
+    order: 3;
+
+    width: 100%;
+
+    border-radius: 0;
+
+    padding:
+      28px 20px 32px;
+  }
+
+  .fm-results h2 {
+    font-size: 34px;
+
+    text-align: center;
+  }
+
+  .fm-result-photos {
+    gap: 9px;
+  }
+
+  .fm-photo-label {
+    width: 90px;
+
+    font-size: 11px;
+  }
+
+  .fm-testimonial p {
+    font-size: 14px;
+  }
 
   .fm-trust-strip {
     grid-template-columns: 1fr;
 
     padding:
-      10px 20px 25px;
+      8px 20px 20px;
   }
-
 
   .fm-trust-item {
+    min-height: 0;
+
+    padding:
+      18px 5px;
+
     border-right: 0;
-
-    border-bottom: 1px solid #dde2e9;
-
-    padding: 20px 5px;
+    border-bottom: 1px solid #dde1e7;
   }
-
 
   .fm-trust-item:last-child {
     border-bottom: 0;
   }
-
 }
   </style>
 </head>
